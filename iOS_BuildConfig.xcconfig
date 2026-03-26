@@ -1,0 +1,30 @@
+// iOS Build Configuration for iPhone 11 - GameCube Optimization
+// Compiler Settings
+ENABLE_BITCODE = NO
+BITCODE_GENERATION_MODE = bitcode
+GCC_OPTIMIZATION_LEVEL = 3
+SWIFT_OPTIMIZATION_LEVEL = -Owholemodule
+CLANG_CXX_LANGUAGE_DIALECT = c++17
+CLANG_CXX_LIBRARY = libc++
+
+// iPhone 11 Specific (A13 Bionic)
+IPHONEOS_DEPLOYMENT_TARGET = 12.0
+ARCHS = arm64
+VALID_ARCHS = arm64
+
+// Memory & Performance
+DEBUG_INFORMATION_FORMAT = dwarf
+STRIP_INSTALLED_PRODUCT = YES
+COPY_PHASE_STRIP = YES
+DEAD_CODE_STRIPPING = YES
+
+// GameCube Emulation Optimization
+OTHER_CFLAGS = -O3 -march=armv8-a+simd -mtune=cortex-a76 -ffast-math -fno-signed-zeros -fno-trapping-math
+OTHER_CPLUSPLUSFLAGS = -O3 -march=armv8-a+simd -mtune=cortex-a76 -ffast-math -fno-signed-zeros -fno-trapping-math
+
+// Metal Rendering (GPU Acceleration)
+ENABLE_METAL = YES
+METAL_COMPILER_FLAGS = -ffast-math
+
+// Link Time Optimization
+LLVM_LTO = YES_THIN
