@@ -1,0 +1,28 @@
+// !1!Begin PBXProject section
+/* Begin PBXProject section */
+project = {
+	archiveVersion = 1;
+	objectVersion = 46;
+	compatibilityVersion = "Xcode 12.0";
+	developmentRegion = "en";
+	hasScannedForEncodings = 0;
+	mainGroup = 1B9F2D312F556917006DA67F;
+	productRefGroup = 1B9F2D322F556917006DA68A;
+	site = "FPT";
+};
+/* End PBXProject section */
+
+// !1!Begin XCBuildConfiguration section
+/* Begin XCBuildConfiguration section */
+  TARGET_FUNCTION: {
+	baseConfigurationReference = "value";
+	name = Release;
+	buildSettings = {
+		SDKROOT = "iphoneos14.0";
+		ENABLE_BITCODE = "NO";
+		OTHER_CFLAGS = "-Os";
+		GCC_OPTIMIZATION_LEVEL = "s";
+		TARGETED_DEVICE_FAMILY = "1"; // 1 = iPhone
+	};
+  };
+/* End XCBuildConfiguration section */
